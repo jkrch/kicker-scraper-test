@@ -18,7 +18,7 @@ jobs:
       with:
         path: src
 
-    - uses: actions/upload-artifact@v2
-      with:
-        name: kicker-scraper
-        path: src
+#    - uses: actions/upload-artifact@v2
+#      with:
+#        name: kicker-scraper
+#        path: src
