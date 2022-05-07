@@ -18,7 +18,24 @@ jobs:
       with:
         path: src
 
-#    - uses: actions/upload-artifact@v2
-#      with:
-#        name: kicker-scraper
-#        path: src
+    - uses: actions/upload-artifact@v2
+      with:
+        name: kicker-scraper
+        path: src
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: PyInstaller Linux
+      uses: JackMcKew/pyinstaller-action-linux@main
+      with:
+        path: src
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: kicker-scraper
+        path: src
